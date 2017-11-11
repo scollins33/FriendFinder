@@ -9,7 +9,7 @@ const bodyParser = require('body-parser');
 // create the Express App
 // then assign use of middleware and routes
 let app = express();
-let PORT = 3000;
+let port = process.env.PORT || 3000;
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -19,6 +19,6 @@ app.use('/api', apiRoutes);
 
 
 // Kick off the server's listening
-app.listen(PORT, () => {
-    console.log(`Listening on ${PORT}`);
+app.listen(port, () => {
+    console.log(`Listening on ${port}`);
 });
