@@ -8,7 +8,7 @@
 
     <title>Friend Finder</title>
 
-    <!-- BoostrapNeutral.3.7 CDN -->
+    <!-- Boostrap 3.3.7 CDN -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
     <!-- jQueryNeutral.2.1 CDN -->
@@ -17,136 +17,184 @@
             integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
             crossorigin="anonymous"></script>
 
+    <!-- Bootstrap JS CDN -->
+    <script
+            src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 </head>
 <body>
     <div class="container">
         <div class="row">
 
-            <form action="/api/friends" method="post">
-                <!-- Name and Image Row -->
+            <form>
+
                 <div class="row">
-                    <div class="form-group col-xs-6">
+                    <!-- Name and Image -->
+                    <div class="form-group">
                         <label for="nameInput">Full Name</label>
-                        <input type="text" class="form-control" id="nameInput" placeholder="John Doe">
+                        <input type="text" class="form-control" id="nameInput" name="username" placeholder="John Doe" required>
                     </div>
-                    <div class="form-group col-xs-6">
+                    <div class="form-group">
                         <label for="imageInput">Link to Image</label>
-                        <input type="text" class="form-control" id="imageInput" placeholder="http://www.imgur.com">
+                        <input type="text" class="form-control" id="imageInput" name="imageLink"  placeholder="http://www.imgur.com" required>
                     </div>
-                </div>
+                    <hr>
 
-                <hr>
-
-                <!-- Questions Row -->
-                <div class="row">
+                    <!-- Questions Row -->
                     <div class="form-group">
                         <label>Question 1</label>
                         <p>This is the first question?</p>
-                        <input type="radio" name="question1" class="radio-inline" id="radio-01-1" value="option1"> Strongly Disagree
-                        <input type="radio" name="question1" class="radio-inline" id="radio-01-2" value="option2"> Disagree
-                        <input type="radio" name="question1" class="radio-inline" id="radio-01-3" value="option3"> Neutral
-                        <input type="radio" name="question1" class="radio-inline" id="radio-01-4" value="option4"> Agree
-                        <input type="radio" name="question1" class="radio-inline" id="radio-01-5" value="option5"> Strongly Agree
+                        <input type="radio" name="question1" class="radio-inline" id="radio-01-1" value="1" required> Strongly Disagree
+                        <input type="radio" name="question1" class="radio-inline" id="radio-01-2" value="2" required> Disagree
+                        <input type="radio" name="question1" class="radio-inline" id="radio-01-3" value="3" required> Neutral
+                        <input type="radio" name="question1" class="radio-inline" id="radio-01-4" value="4" required> Agree
+                        <input type="radio" name="question1" class="radio-inline" id="radio-01-5" value="5" required> Strongly Agree
                     </div>
                     <br>
                     <div class="form-group">
                         <label>Question 2</label>
                         <p>This is the first question?</p>
-                        <input type="radio" name="question2" class="radio-inline" id="radio-02-1" value="option1"> Strongly Disagree
-                        <input type="radio" name="question2" class="radio-inline" id="radio-02-2" value="option2"> Disagree
-                        <input type="radio" name="question2" class="radio-inline" id="radio-02-3" value="option3"> Neutral
-                        <input type="radio" name="question2" class="radio-inline" id="radio-02-4" value="option4"> Agree
-                        <input type="radio" name="question2" class="radio-inline" id="radio-02-5" value="option5"> Strongly Agree
+                        <input type="radio" name="question2" class="radio-inline" id="radio-02-1" value="1" required> Strongly Disagree
+                        <input type="radio" name="question2" class="radio-inline" id="radio-02-2" value="2" required> Disagree
+                        <input type="radio" name="question2" class="radio-inline" id="radio-02-3" value="3" required> Neutral
+                        <input type="radio" name="question2" class="radio-inline" id="radio-02-4" value="4" required> Agree
+                        <input type="radio" name="question2" class="radio-inline" id="radio-02-5" value="5" required> Strongly Agree
                     </div>
                     <br>
                     <div class="form-group">
                         <label>Question 3</label>
                         <p>This is the first question?</p>
-                        <input type="radio" name="question3" class="radio-inline" id="radio-03-1" value="option1"> Strongly Disagree
-                        <input type="radio" name="question3" class="radio-inline" id="radio-03-2" value="option2"> Disagree
-                        <input type="radio" name="question3" class="radio-inline" id="radio-03-3" value="option3"> Neutral
-                        <input type="radio" name="question3" class="radio-inline" id="radio-03-4" value="option4"> Agree
-                        <input type="radio" name="question3" class="radio-inline" id="radio-03-5" value="option5"> Strongly Agree
+                        <input type="radio" name="question3" class="radio-inline" id="radio-03-1" value="1" required> Strongly Disagree
+                        <input type="radio" name="question3" class="radio-inline" id="radio-03-2" value="2" required> Disagree
+                        <input type="radio" name="question3" class="radio-inline" id="radio-03-3" value="3" required> Neutral
+                        <input type="radio" name="question3" class="radio-inline" id="radio-03-4" value="4" required> Agree
+                        <input type="radio" name="question3" class="radio-inline" id="radio-03-5" value="5" required> Strongly Agree
                     </div>
                     <br>
                     <div class="form-group">
                         <label>Question 4</label>
                         <p>This is the first question?</p>
-                        <input type="radio" name="question4" class="radio-inline" id="radio-04-1" value="option1"> Strongly Disagree
-                        <input type="radio" name="question4" class="radio-inline" id="radio-04-2" value="option2"> Disagree
-                        <input type="radio" name="question4" class="radio-inline" id="radio-04-3" value="option3"> Neutral
-                        <input type="radio" name="question4" class="radio-inline" id="radio-04-4" value="option4"> Agree
-                        <input type="radio" name="question4" class="radio-inline" id="radio-04-5" value="option5"> Strongly Agree
+                        <input type="radio" name="question4" class="radio-inline" id="radio-04-1" value="1" required> Strongly Disagree
+                        <input type="radio" name="question4" class="radio-inline" id="radio-04-2" value="2" required> Disagree
+                        <input type="radio" name="question4" class="radio-inline" id="radio-04-3" value="3" required> Neutral
+                        <input type="radio" name="question4" class="radio-inline" id="radio-04-4" value="4" required> Agree
+                        <input type="radio" name="question4" class="radio-inline" id="radio-04-5" value="5" required> Strongly Agree
                     </div>
                     <br>
                     <div class="form-group">
                         <label>Question 5</label>
                         <p>This is the first question?</p>
-                        <input type="radio" name="question5" class="radio-inline" id="radio-05-1" value="option1"> Strongly Disagree
-                        <input type="radio" name="question5" class="radio-inline" id="radio-05-2" value="option2"> Disagree
-                        <input type="radio" name="question5" class="radio-inline" id="radio-05-3" value="option3"> Neutral
-                        <input type="radio" name="question5" class="radio-inline" id="radio-05-4" value="option4"> Agree
-                        <input type="radio" name="question5" class="radio-inline" id="radio-05-5" value="option5"> Strongly Agree
+                        <input type="radio" name="question5" class="radio-inline" id="radio-05-1" value="1" required> Strongly Disagree
+                        <input type="radio" name="question5" class="radio-inline" id="radio-05-2" value="2" required> Disagree
+                        <input type="radio" name="question5" class="radio-inline" id="radio-05-3" value="3" required> Neutral
+                        <input type="radio" name="question5" class="radio-inline" id="radio-05-4" value="4" required> Agree
+                        <input type="radio" name="question5" class="radio-inline" id="radio-05-5" value="5" required> Strongly Agree
                     </div>
                     <br>
                     <div class="form-group">
                         <label>Question 6</label>
                         <p>This is the first question?</p>
-                        <input type="radio" name="question6" class="radio-inline" id="radio-06-1" value="option1"> Strongly Disagree
-                        <input type="radio" name="question6" class="radio-inline" id="radio-06-2" value="option2"> Disagree
-                        <input type="radio" name="question6" class="radio-inline" id="radio-06-3" value="option3"> Neutral
-                        <input type="radio" name="question6" class="radio-inline" id="radio-06-4" value="option4"> Agree
-                        <input type="radio" name="question6" class="radio-inline" id="radio-06-5" value="option5"> Strongly Agree
+                        <input type="radio" name="question6" class="radio-inline" id="radio-06-1" value="1" required> Strongly Disagree
+                        <input type="radio" name="question6" class="radio-inline" id="radio-06-2" value="2" required> Disagree
+                        <input type="radio" name="question6" class="radio-inline" id="radio-06-3" value="3" required> Neutral
+                        <input type="radio" name="question6" class="radio-inline" id="radio-06-4" value="4" required> Agree
+                        <input type="radio" name="question6" class="radio-inline" id="radio-06-5" value="5" required> Strongly Agree
                     </div>
                     <br>
                     <div class="form-group">
                         <label>Question 7</label>
                         <p>This is the first question?</p>
-                        <input type="radio" name="question7" class="radio-inline" id="radio-07-1" value="option1"> Strongly Disagree
-                        <input type="radio" name="question7" class="radio-inline" id="radio-07-2" value="option2"> Disagree
-                        <input type="radio" name="question7" class="radio-inline" id="radio-07-3" value="option3"> Neutral
-                        <input type="radio" name="question7" class="radio-inline" id="radio-07-4" value="option4"> Agree
-                        <input type="radio" name="question7" class="radio-inline" id="radio-07-5" value="option5"> Strongly Agree
+                        <input type="radio" name="question7" class="radio-inline" id="radio-07-1" value="1" required> Strongly Disagree
+                        <input type="radio" name="question7" class="radio-inline" id="radio-07-2" value="2" required> Disagree
+                        <input type="radio" name="question7" class="radio-inline" id="radio-07-3" value="3" required> Neutral
+                        <input type="radio" name="question7" class="radio-inline" id="radio-07-4" value="4" required> Agree
+                        <input type="radio" name="question7" class="radio-inline" id="radio-07-5" value="5" required> Strongly Agree
                     </div>
                     <br>
                     <div class="form-group">
                         <label>Question 8</label>
                         <p>This is the first question?</p>
-                        <input type="radio" name="question8" class="radio-inline" id="radio-08-1" value="option1"> Strongly Disagree
-                        <input type="radio" name="question8" class="radio-inline" id="radio-08-2" value="option2"> Disagree
-                        <input type="radio" name="question8" class="radio-inline" id="radio-08-3" value="option3"> Neutral
-                        <input type="radio" name="question8" class="radio-inline" id="radio-08-4" value="option4"> Agree
-                        <input type="radio" name="question8" class="radio-inline" id="radio-08-5" value="option5"> Strongly Agree
+                        <input type="radio" name="question8" class="radio-inline" id="radio-08-1" value="1" required> Strongly Disagree
+                        <input type="radio" name="question8" class="radio-inline" id="radio-08-2" value="2" required> Disagree
+                        <input type="radio" name="question8" class="radio-inline" id="radio-08-3" value="3" required> Neutral
+                        <input type="radio" name="question8" class="radio-inline" id="radio-08-4" value="4" required> Agree
+                        <input type="radio" name="question8" class="radio-inline" id="radio-08-5" value="5" required> Strongly Agree
                     </div>
                     <br>
                     <div class="form-group">
                         <label>Question 9</label>
                         <p>This is the first question?</p>
-                        <input type="radio" name="question9" class="radio-inline" id="radio-09-1" value="option1"> Strongly Disagree
-                        <input type="radio" name="question9" class="radio-inline" id="radio-09-2" value="option2"> Disagree
-                        <input type="radio" name="question9" class="radio-inline" id="radio-09-3" value="option3"> Neutral
-                        <input type="radio" name="question9" class="radio-inline" id="radio-09-4" value="option4"> Agree
-                        <input type="radio" name="question9" class="radio-inline" id="radio-09-5" value="option5"> Strongly Agree
+                        <input type="radio" name="question9" class="radio-inline" id="radio-09-1" value="1" required> Strongly Disagree
+                        <input type="radio" name="question9" class="radio-inline" id="radio-09-2" value="2" required> Disagree
+                        <input type="radio" name="question9" class="radio-inline" id="radio-09-3" value="3" required> Neutral
+                        <input type="radio" name="question9" class="radio-inline" id="radio-09-4" value="4" required> Agree
+                        <input type="radio" name="question9" class="radio-inline" id="radio-09-5" value="5" required> Strongly Agree
                     </div>
                     <br>
                     <div class="form-group">
                         <label>Question 10</label>
                         <p>This is the first question?</p>
-                        <input type="radio" name="question10" class="radio-inline" id="radio-10-1" value="option1"> Strongly Disagree
-                        <input type="radio" name="question10" class="radio-inline" id="radio-10-2" value="option2"> Disagree
-                        <input type="radio" name="question10" class="radio-inline" id="radio-10-3" value="option3"> Neutral
-                        <input type="radio" name="question10" class="radio-inline" id="radio-10-4" value="option4"> Agree
-                        <input type="radio" name="question10" class="radio-inline" id="radio-10-5" value="option5"> Strongly Agree
+                        <input type="radio" name="question10" class="radio-inline" id="radio-10-1" value="1" required> Strongly Disagree
+                        <input type="radio" name="question10" class="radio-inline" id="radio-10-2" value="2" required> Disagree
+                        <input type="radio" name="question10" class="radio-inline" id="radio-10-3" value="3" required> Neutral
+                        <input type="radio" name="question10" class="radio-inline" id="radio-10-4" value="4" required> Agree
+                        <input type="radio" name="question10" class="radio-inline" id="radio-10-5" value="5" required> Strongly Agree
+                    </div>
+                    <hr>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="btn btn-success" id="submitForm">Submit Answers</button>
+                </div>
+            </form>
+
+            <!-- Modal -->
+            <div id="friendModal" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Friend Suggestion</h4>
+                    </div>
+                    <div id="modal-body">
+                        <h1 id="friendName"></h1>
+                        <img id="friendImage" src="" alt="friend image">
                     </div>
                 </div>
-                <hr>
-
-                <!-- Submit Button -->
-                <button type="submit" class="btn btn-success" id="submitForm">Submit Answers</button>
-            </form>
+                </div>
+            </div>
 
         </div>
     </div>
+
+    <script type="text/javascript">
+        $('#submitForm').on('click', function () {
+            event.preventDefault();
+
+            $.post('/api/friends',
+                {
+                    name: $('#nameInput').val().trim(),
+                    photo: $('#imageInput').val().trim(),
+                    scores: [
+                        $('input[name=question1]:checked').val(),
+                        $('input[name=question2]:checked').val(),
+                        $('input[name=question3]:checked').val(),
+                        $('input[name=question4]:checked').val(),
+                        $('input[name=question5]:checked').val(),
+                        $('input[name=question6]:checked').val(),
+                        $('input[name=question7]:checked').val(),
+                        $('input[name=question8]:checked').val(),
+                        $('input[name=question9]:checked').val(),
+                        $('input[name=question10]:checked').val()
+                    ]
+                })
+                .done((data) => {
+                    $('#friendName').text(data.name);
+                    $('#friendImage').prop('src', data.photo);
+                    $('#friendModal').modal('show');
+                });
+        });
+    </script>
 
 </body>
 </html>
